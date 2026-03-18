@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/pynblint
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/eosc-node-endpoint:
+      branch: main
+      repo: https://github.com/madgeek-arc/eosc-node-endpoint
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint git:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-white-grasshopper.sh
+        container: qc.acc_scummy-amaranth-echidna
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-buff-bullfrog.sh
+        container: qc.doc_sloppy-chartreuse-malamute
+      github.com/madgeek-arc/eosc-node-endpoint git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-amber-husky.sh
+        container: qc.doc_slimy-brass-budgerigar
+      github.com/madgeek-arc/eosc-node-endpoint markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-ochre-crane.sh
+        container: qc.doc_tasty-azure-akita
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-gamboge-lizard.sh
+        container: qc.lic_flaky-magenta-caracal
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-cinnamon-dogfish.sh
+        container: qc.sty_sunny-wisteria-starfish
+      github.com/madgeek-arc/eosc-node-endpoint jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-carmine-manatee.sh
+        container: qc.sty_lumpy-amber-snail
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-mauve-spaniel.sh
+        container: qc.ver_whiny-amaranth-molly
+timeout: 5400
