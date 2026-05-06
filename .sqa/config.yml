@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/pynblint
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/madgeek-arc/eosc-node-endpoint:
       branch: main
@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-white-grasshopper.sh
-        container: qc.acc_scummy-amaranth-echidna
+        - /usr/bin/env sh .sqa/script.paltry-green-hyrax.sh
+        container: qc.acc_homey-celadon-koala
   QC.Doc:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-buff-bullfrog.sh
-        container: qc.doc_sloppy-chartreuse-malamute
+        - /usr/bin/env sh .sqa/script.lanky-turquoise-impala.sh
+        container: qc.doc_sleepy-black-husky
       github.com/madgeek-arc/eosc-node-endpoint git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-amber-husky.sh
-        container: qc.doc_slimy-brass-budgerigar
+        - /usr/bin/env sh .sqa/script.droopy-periwinkle-chihuahua.sh
+        container: qc.doc_scanty-denim-snail
       github.com/madgeek-arc/eosc-node-endpoint markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-ochre-crane.sh
-        container: qc.doc_tasty-azure-akita
+        - /usr/bin/env sh .sqa/script.hazy-tomato-eel.sh
+        container: qc.doc_skimpy-lime-bongo
   QC.Lic:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-gamboge-lizard.sh
-        container: qc.lic_flaky-magenta-caracal
+        - /usr/bin/env sh .sqa/script.slaphappy-lemon-giraffe.sh
+        container: qc.lic_greasy-sepia-wildebeest
   QC.Sty:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-cinnamon-dogfish.sh
-        container: qc.sty_sunny-wisteria-starfish
+        - /usr/bin/env sh .sqa/script.snazzy-myrtle-capuchin.sh
+        container: qc.sty_scaly-lilac-schnauzer
       github.com/madgeek-arc/eosc-node-endpoint jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-carmine-manatee.sh
-        container: qc.sty_lumpy-amber-snail
+        - /usr/bin/env sh .sqa/script.tacky-ivory-angora.sh
+        container: qc.sty_shaky-cerise-akita
   QC.Ver:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-mauve-spaniel.sh
-        container: qc.ver_whiny-amaranth-molly
+        - /usr/bin/env sh .sqa/script.scanty-cobalt-whale.sh
+        container: qc.ver_skimpy-periwinkle-kiwi
 timeout: 5400
