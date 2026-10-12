@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/cessda/eosc-node-endpoint git:
         commands:
-        - /usr/bin/env sh .sqa/script.turquoise_brilliant_anaconda.sh
-        container: qc.acc_sand_trustworthy_squirrel
+        - /usr/bin/env sh .sqa/script.turquoise_enigmatic_elephant.sh
+        container: qc.acc_thunder_pensive_bear
   QC.Doc:
     repos:
       github.com/cessda/eosc-node-endpoint find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ash_compassionate_skunk.sh
-        container: qc.doc_fandango_sarcastic_goat
+        - /usr/bin/env sh .sqa/script.claret_understanding_dugong.sh
+        container: qc.doc_seafoam_adaptable_rattlesnake
       github.com/cessda/eosc-node-endpoint git:
         commands:
-        - /usr/bin/env sh .sqa/script.saffron_unique_crocodile.sh
-        container: qc.doc_caramel_lively_quoll
+        - /usr/bin/env sh .sqa/script.glacier_positive_osprey.sh
+        container: qc.doc_peach_independent_moose
       github.com/cessda/eosc-node-endpoint markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.butter_melancholy_serval.sh
-        container: qc.doc_mint_attentive_piranha
+        - /usr/bin/env sh .sqa/script.bone_content_heron.sh
+        container: qc.doc_onyx_artistic_hare
   QC.Lic:
     repos:
       github.com/cessda/eosc-node-endpoint licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.clove_peaceful_grizzly.sh
-        container: qc.lic_cinnabar_dramatic_thrush
+        - /usr/bin/env sh .sqa/script.zinnia_wondrous_chameleon.sh
+        container: qc.lic_dahlia_hopeful_camel
   QC.Sty:
     repos:
       github.com/cessda/eosc-node-endpoint checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.raven_blissful_dhole.sh
-        container: qc.sty_bone_energetic_cheetah
+        - /usr/bin/env sh .sqa/script.denim_proud_camel.sh
+        container: qc.sty_powder_cautious_angelfish
       github.com/cessda/eosc-node-endpoint jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cream_mischievous_sphinx.sh
-        container: qc.sty_arctic_witty_seal
+        - /usr/bin/env sh .sqa/script.powder_delighted_spren.sh
+        container: qc.sty_tundra_sincere_kirin
   QC.Ver:
     repos:
       github.com/cessda/eosc-node-endpoint get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flax_motivated_squirrel.sh
-        container: qc.ver_ecru_diligent_ibex
+        - /usr/bin/env sh .sqa/script.pine_imaginative_ferret.sh
+        container: qc.ver_echelon_gracious_buffalo
 timeout: 5400
