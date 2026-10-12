@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/madgeek-arc/eosc-node-endpoint &&
+cd github.com/cessda/eosc-node-endpoint &&
     git rev-parse --is-inside-work-tree 
 )

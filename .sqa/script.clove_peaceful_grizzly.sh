@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/madgeek-arc/eosc-node-endpoint &&
-    jsonlint-cli "**/*.json"
+cd github.com/cessda/eosc-node-endpoint &&
+    licensee detect . --confidence 60 --json 
 )
